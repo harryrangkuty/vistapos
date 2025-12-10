@@ -103,7 +103,7 @@
     <table class="header-table">
         <tr>
             <td style="width:100px; text-align:center;">
-                <img src="{{ public_path('images/main_logo.webp') }}" alt="Logo" style="height:80px;">
+                <img src="{{ public_path('images/vista_logo.webp') }}" alt="Logo" style="height:80px;">
             </td>
             <td class="header-title" style="text-align:center;">
                 <h2>Laporan Mahasiswa Belum Ambil KRS</h2>

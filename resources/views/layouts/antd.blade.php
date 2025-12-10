@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     {{-- favicon --}}
-    <link rel="icon" href="{{ asset('images/VISTA POS_favicon.webp') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('images/simaris_favicon.webp') }}" type="image/x-icon">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,14 +16,14 @@
         href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
-    <title>{{ config('app.name', 'UBT VISTA POS') }} | {{ $title ?? '' }}</title>
+    <title>{{ config('app.name', 'VISTA POS') }} | {{ $title ?? '' }}</title>
 
     <script>
         window._USER = @json(auth()->user() ? auth()->user()->load('roles', 'activeRole') : null);
         window._SUDO = @json(auth()->user() ? auth()->user()->activeRole->name === 'administrator' : null);
         window._PURCHASING_OFFICER = @json(auth()->user() ? auth()->user()->activeRole->name === 'purchasing_officer' : null);
         window.ASSET_URL = @json(asset('/'));
-        window.APP_NAME = @json(config('app.name', 'UBT VISTA POS'));
+        window.APP_NAME = @json(config('app.name', 'VISTA POS'));
         window._HOST = @json(url('/'));
     </script>
 

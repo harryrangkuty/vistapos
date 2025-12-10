@@ -212,7 +212,7 @@ export default {
                 <span
                   class="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-purple-400 rounded-br-md transition duration-300"></span>
               </template>
-              <img :src="publicPath('images/main_logo.webp')" :class="[
+              <img :src="publicPath('images/vista_logo.webp')" :class="[
                 'transition-all duration-500 ease-in-out',
                 collapsed
                   ? ''

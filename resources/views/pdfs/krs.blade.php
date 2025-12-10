@@ -49,7 +49,7 @@
         <tr>
             <!-- Logo kiri -->
             <td style="width:100px; text-align:center; vertical-align:middle;">
-                <img src="{{ public_path('images/main_logo.webp') }}" alt="Logo" style="height:80px;">
+                <img src="{{ public_path('images/vista_logo.webp') }}" alt="Logo" style="height:80px;">
             </td>
 
             <!-- Teks header tengah -->

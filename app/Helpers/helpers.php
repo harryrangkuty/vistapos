@@ -28,49 +28,66 @@ if (!function_exists('menu_list')) {
     function menu_list($user = null)
     {
         $menu = [
-            // ["key" => null, "icon" => null, "title" => "Monitoring", "url" => null],
-            // ["key" => "monitoring", "icon" => "line-md:speed-loop", "title" => "Monitoring", "url" => "monitoring"],
-            ["key" => null, "icon" => null, "title" => "Pengadaan Barang", "url" => null],
-            ["key" => "procurements/request", "icon" => "line-md:downloading-loop", "title" => "Request Pengadaan", "url" => "procurements/request"],
-            ["key" => "procurements", "icon" => "line-md:clipboard-plus", "title" => "Pengadaan Barang", "url" => "procurements"],
-            ["key" => null, "icon" => null, "title" => "Aset Tetap", "url" => null],
-            ["key" => "asset/profile", "icon" => "line-md:text-box", "title" => "Daftar Aset", "url" => "asset/profile"],
-            ["key" => "asset/search", "icon" => "line-md:search", "title" => "Cari Aset", "url" => "asset/search"],
-            ["key" => "asset/distribution", "icon" => "line-md:turn-sharp-left", "title" => "Distribusi Aset", "url" => "asset/distribution"],
-            ["key" => "asset/disposal", "icon" => "line-md:clipboard-minus", "title" => "Penghapusan Aset", "url" => "asset/disposal"],
+            ["key" => null, "icon" => null, "title" => "Penjualan", "url" => null],
+
+            ["key" => "sales/create", "icon" => "solar:cart-plus-bold-duotone", "title" => "Tambah Penjualan", "url" => "sales/create"],
+            ["key" => "sales", "icon" => "solar:cart-large-bold-duotone", "title" => "Daftar Penjualan", "url" => "sales"],
+            ["key" => "sales/return", "icon" => "solar:arrow-left-bold-duotone", "title" => "Retur Penjualan", "url" => "sales/return"],
+
+            [
+                "key" => "report/sales",
+                "icon" => "solar:document-add-bold-duotone",
+                "title" => "Laporan Penjualan",
+                "url" => null,
+                "submenu" => [
+                    ["key" => "report/sales/transaction", "icon" => "solar:document-text-bold-duotone", "title" => "Laporan Transaksi Persediaan", "url" => "report/inventoy/transaction"],
+                ],
+            ],
+
+            ["key" => null, "icon" => null, "title" => "Pembelian", "url" => null],
+
+            ["key" => "purchases/create", "icon" => "solar:cart-plus-bold-duotone", "title" => "Tambah Pembelian", "url" => "purchases/create"],
+            ["key" => "purchases", "icon" => "solar:bag-bold-duotone", "title" => "Daftar Pembelian", "url" => "purchases"],
+            ["key" => "purchases/return", "icon" => "solar:arrow-left-bold-duotone", "title" => "Retur Pembelian", "url" => "purchases/return"],
+
             [
                 "key" => "report/asset",
-                "icon" => "line-md:text-box-multiple",
-                "title" => "Laporan Aset",
+                "icon" => "solar:document-add-bold-duotone",
+                "title" => "Laporan Pembelian",
                 "url" => null,
                 "submenu" => [
-                    ["key" => "report/asset/transaction", "icon" => "line-md:text-box", "title" => "Laporan Transaksi Aset", "url" => "report/asset/transaction"],
+                    ["key" => "report/asset/transaction", "icon" => "solar:document-text-bold-duotone", "title" => "Laporan Transaksi Aset", "url" => "report/asset/transaction"],
                 ],
             ],
-            ["key" => null, "icon" => null, "title" => "Persediaan Habis Pakai", "url" => null],
-            ["key" => "inventory/data", "icon" => "streamline-ultimate:warehouse-cart-package-ribbon-bold", "title" => "Daftar Stock Persediaan", "url" => "inventory/data"],
-            ["key" => "inventory/out", "icon" => "line-md:log-out", "title" => "Persediaan Keluar", "url" => "inventory/keluar"],
-            ["key" => "inventory/mutation", "icon" => "line-md:arrows-horizontal", "title" => "Persediaan Mutasi", "url" => "inventory/mutation"],
+
+            ["key" => null, "icon" => null, "title" => "Stock", "url" => null],
+
             [
-                "key" => "report/inventory",
-                "icon" => "line-md:text-box-multiple",
-                "title" => "Laporan Persediaan",
+                "key" => "report/sales",
+                "icon" => "solar:transfer-horizontal-bold-duotone",
+                "title" => "Transfer Stock",
                 "url" => null,
                 "submenu" => [
-                    ["key" => "report/inventoy/transaction", "icon" => "line-md:text-box", "title" => "Laporan Transaksi Persediaan", "url" => "report/inventoy/transaction"],
+                    ["key" => "stock-transfer/create", "icon" => "solar:arrows-left-right-bold-duotone", "title" => "Tambah Transfer Stok", "url" => "stock-transfer/create"],
+                    ["key" => "stock-transfer", "icon" => "solar:arrows-up-down-bold-duotone", "title" => "Daftar Transfer Stok", "url" => "stock-transfer"],
                 ],
             ],
+
+            ["key" => "inventory/data", "icon" => "solar:box-bold-duotone", "title" => "Daftar Stock Persediaan", "url" => "inventory/data"],
+
             ["key" => null, "icon" => null, "title" => "Master Data", "url" => null],
-            ["key" => "branches", "icon" => "icon-park-outline:branch-one", "title" => "Manajemen Branch", "url" => "branches"],
-            ["key" => "warehouses", "icon" => "mdi:warehouse", "title" => "Manajemen Gudang", "url" => "warehouses"],
-            ["key" => "transaction-types", "icon" => "tabler:transaction-dollar", "title" => "Manajemen Jenis Transaksi", "url" => "transaction-types"],
-            ["key" => "stock-codes", "icon" => "line-md:clipboard-list", "title" => "Manajemen Kode Stok", "url" => "stock-codes"],
-            ["key" => "categories", "icon" => "line-md:grid-3-twotone", "title" => "Manajemen Kategori", "url" => "categories"],
-            ["key" => "depreciation-groups", "icon" => "line-md:speed-loop", "title" => "Kelompok Penyusutan", "url" => "depreciation-groups"],
-            ["key" => "uoms", "icon" => "line-md:brake-abs-twotone", "title" => "Manajemen Satuan", "url" => "uoms"],
-            ["key" => "items", "icon" => "line-md:list-3-filled", "title" => "Manajemen Master Item", "url" => "items"],
-            ["key" => "suppliers", "icon" => "line-md:phone-call-loop", "title" => "Manajemen Supplier", "url" => "suppliers"],
-            ["key" => "rooms", "icon" => "fluent:conference-room-20-regular", "title" => "Manajemen Ruang", "url" => "rooms"],
+
+            ["key" => "branches", "icon" => "solar:buildings-bold-duotone", "title" => "Manajemen Branch", "url" => "branches"],
+            ["key" => "warehouses", "icon" => "solar:buildings-bold-duotone", "title" => "Manajemen Gudang", "url" => "warehouses"],
+            ["key" => "transaction-types", "icon" => "solar:shuffle-bold-duotone", "title" => "Manajemen Jenis Transaksi", "url" => "transaction-types"],
+            ["key" => "stock-codes", "icon" => "solar:clipboard-check-bold-duotone", "title" => "Manajemen Kode Stok", "url" => "stock-codes"],
+            ["key" => "categories", "icon" => "solar:widget-5-bold-duotone", "title" => "Manajemen Kategori", "url" => "categories"],
+            ["key" => "uoms", "icon" => "solar:ruler-bold-duotone", "title" => "Manajemen Satuan", "url" => "uoms"],
+            ["key" => "items", "icon" => "solar:list-bold-duotone", "title" => "Manajemen Master Item", "url" => "items"],
+            ["key" => "suppliers", "icon" => "solar:buildings-bold-duotone", "title" => "Manajemen Supplier", "url" => "suppliers"],
+            ["key" => "bank", "icon" => "solar:card-bold-duotone", "title" => "Transaksi Bank", "url" => "bank"],
+
+
             ["key" => null, "icon" => null, "title" => "Administrator", "url" => null],
             ["key" => "users", "icon" => "line-md:account", "title" => "Manajemen User", "url" => "users"],
             ["key" => "roles", "icon" => "line-md:file-document-cancel", "title" => "Manajemen Role", "url" => "roles"],

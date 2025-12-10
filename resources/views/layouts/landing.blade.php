@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="icon" href="/images/VISTA POS_favicon.webp" type="image/x-icon">
+    <link rel="icon" href="/images/simaris_favicon.webp" type="image/x-icon">
     <title>VISTA POS | Versatile Integrated Sales & Transaction Assistant Point of Sale</title>
 
     {{-- @vite(['resources/js/frontend.js']) --}}
@@ -207,7 +207,7 @@
     </div>
     {{-- MAIN CONTENT --}}
     <div class="relative h-screen w-screen overflow-hidden">
-        <img src="/images/VISTA POS_wallpaper.webp" alt="Background"
+        <img src="/images/vista_pos_wallpaper.webp" alt="Background"
             class="absolute inset-0 w-full h-full object-cover brightness-100">
         <div class="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black opacity-40"></div>
         <div class="absolute inset-0 bg-gradient-to-br from-purple-900/60 via-violet-800/50 to-indigo-900/40">
@@ -219,11 +219,17 @@
             <div class="absolute top-1/3 right-1/4 text-purple-500/20 text-7xl animate-spin-slow glow">🌐</div>
             <!-- card -->
             <div
-                class="relative bg-white/30 backdrop-blur-xl border border-white/40 rounded-3xl shadow-[0_0_50px_rgba(168,85,247,0.3)] px-28 py-12 flex flex-col items-center hover:shadow-[0_0_40px_rgba(139,92,246,0.5)] transition-all duration-700 ease-in-out">
-                <img src="/images/main_logo.webp" alt="Logo"
+                class="relative bg-white/60 backdrsop-blur-xl border border-white/40 rounded-3xl shadow-[0_0_50px_rgba(168,85,247,0.3)] px-28 py-12 flex flex-col items-center hover:shadow-[0_0_40px_rgba(139,92,246,0.5)] transition-all duration-700 ease-in-out">
+                <img src="/images/vista_logo.webp" alt="Logo"
                     class="w-40 h-40 mb-6 float drop-shadow-[0_0_15px_rgba(168,85,247,0.4)] animate-float">
-                <h1 class="text-5xl font-extrabold text-white tracking-wide drop-shadow-md text-light">VISTA POS</h1>
-                <p class="mt-2 text-lg text-white italic tracking-wide">Versatile Integrated Sales & Transaction Assistant Point of Sale</p>
+                <div class="flex gap-x-2 text-5xl font-extrabold tracking-wide drop-shadow-md">
+                    <h1 class="text-blue-900">VISTA</h1>
+                    <span class="text-yellow-500">POS</span>
+                </div>
+                <div class="mt-2 text-lg italic tracking-wide">
+                    <span class="text-blue-900">Versatile Integrated Sales & Transaction Assistant</span>
+                    <span class="text-yellow-500 text-xl bg-blue-900 py-1 px-4 rounded-full">Point of Sale</span>
+                </div>
                 <button onclick="openModal()"
                     class="relative mt-10 px-12 py-3 font-semibold text-white tracking-wide rounded-full 
                         bg-gradient-to-r from-violet-700 via-purple-600 to-violet-800 
@@ -241,7 +247,7 @@
                             translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-out">
                     </div>
                 </button>
-                <p class="mt-8 text-sm text-black">
+                <p class="mt-8 text-sm text-blue-900">
                     © 2025 Designed and Programmed by Harry Rangkuti, A.Md.Kom
                 </p>
             </div>
