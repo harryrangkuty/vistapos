@@ -195,7 +195,7 @@ export default {
 </script>
 <template>
   <a-config-provider :theme="antTheme">
-    <a-layout class="min-h-screen h-full" style="background-image: url('/images/bg_simaris_purple.webp');">
+    <a-layout class="min-h-screen h-full" style="background-image: url('/images/bg_VISTA POS_purple.webp');">
       <!-- Menu Desktop -->
       <a-layout-sider v-model:collapsed="collapsed" :trigger="null" :theme="isDark ? 'dark' : 'light'" width="250"
         collapsed-width="65" class="shadow-md overflow-auto h-screen !fixed left-0 top-0 bottom-0" collapsible>
@@ -222,11 +222,11 @@ export default {
             <div v-if="!collapsed" class="mt-5 text-center space-y-1">
               <h1
                 class="text-2xl font-extrabold bg-gradient-to-r from-purple-700 via-purple-500 to-pink-500 bg-clip-text text-transparent tracking-wide drop-shadow-sm">
-                SIMARIS
+                VISTA POS
               </h1>
               <p class="text-xs font-medium uppercase tracking-wider">
-                <span class="text-purple-400">RSU </span>
-                <span class="text-yellow-500 font-extrabold">Bunda Thamrin</span>
+                <span class="text-purple-400">PT </span>
+                <span class="text-yellow-500 font-extrabold">Hartech</span>
               </p>
             </div>
           </div>
@@ -394,10 +394,8 @@ export default {
           <div class="w-full text-center text-sm md:text-base" :style="footerStyle">
             <div class="px-3 py-2 md:py-2.5 flex flex-col md:flex-row justify-center items-center gap-y-1 md:gap-x-2"
               :class="isDark ? 'text-slate-100' : 'text-gray-700'">
-              <span><b>SIMARIS</b> ©2025 Designed and Programmed by</span>
+              <span><b>VISTA POS</b> ©2025 Designed and Programmed by</span>
               <span class="font-semibold">Harry Rangkuti, A.Md.Kom</span>
-              <span class="hidden md:inline">|</span>
-              <span class="font-semibold">PT. Thamrin Sinar Surya</span>
             </div>
           </div>
         </a-layout-footer>

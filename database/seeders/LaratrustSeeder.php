@@ -69,8 +69,6 @@ class LaratrustSeeder extends Seeder
             'position' => 'SIM RS',
             'password' => bcrypt('1234567890'),
             'photo' => null,
-            'app_mode' => 'asset',
-            'fiscal_year' => 2025,
             'active_role_id' => 1,
         ]);
 
@@ -105,8 +103,8 @@ class LaratrustSeeder extends Seeder
         foreach ($purchaserList as $purchaserData) {
             $l = \App\Models\User::create(array_merge($purchaserData, [
                 'photo' => null,
-                'app_mode' => 'asset',
-                'fiscal_year' => 2025,
+
+
                 'active_role_id' => 2,
             ]));
 

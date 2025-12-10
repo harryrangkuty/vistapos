@@ -26,7 +26,6 @@ class DatabaseSeeder extends Seeder
             CategorySeeder::class,
             UomSeeder::class,
             ItemSeeder::class,
-            ImportOldAssetsSeeder::class,
         ]);
     }
 }
