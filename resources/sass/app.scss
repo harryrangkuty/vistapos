@@ -175,8 +175,6 @@
       #bfdbfe
       /* blue-100 */
     ) !important;
-
-  border-right: 1px solid #bbb;
 }
 
 /* Hapus background default menu */
@@ -187,7 +185,7 @@
 .ant-menu-light {
 
   /* Menu & submenu text */
-  .ant-menu-item a,
+  .ant-menu-item, .ant-menu-item a,
   .ant-menu-submenu-title {
     color: #581c87 !important;
   }
@@ -261,7 +259,7 @@
   }
 
   /* Menu text */
-  .ant-menu-item a,
+  .ant-menu-item, .ant-menu-item a,
   .ant-menu-submenu-title {
     color: #c4b5fd !important;
     /* pastel purple */

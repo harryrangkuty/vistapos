@@ -114,10 +114,10 @@ export default {
           )`
           : `linear-gradient(
             90deg,
-            rgba(149, 131, 198, 0) 0%,
-            rgba(149, 131, 198, 0.6) 33%,
-            rgba(149, 131, 198, 0.3) 66%,
-            rgba(149, 131, 198, 0) 100%
+              rgba(135, 150, 210, 0) 0%,
+              rgba(135, 150, 210, 0.6) 33%,
+              rgba(135, 150, 210, 0.3) 66%,
+              rgba(135, 150, 210, 0) 100%
           )`,
         color: this.isDark ? '#f8fafc' : '#374151',
         transition: 'all 0.3s ease'
@@ -233,8 +233,8 @@ export default {
           <div v-if="!collapsed" class="mt-4 h-px bg-gradient-to-r from-yellow-400/70 via-yellow-300/80 to-transparent">
           </div>
         </a>
-        <AppMenu :theme="isDark ? 'dark' : 'light'" :menu="menu" v-model:selectedKeys="selectedKeys" v-model:openKeys="openKeys" :collapsed="collapsed"
-          :accordion="accordion" />
+        <AppMenu :theme="isDark ? 'dark' : 'light'" :menu="menu" v-model:selectedKeys="selectedKeys"
+          v-model:openKeys="openKeys" :collapsed="collapsed" :accordion="accordion" />
         <div class="p-3 text-center text-xs font-bold text-purple-700 border-t border-purple-200">
           versi 1.0
         </div>
@@ -250,8 +250,8 @@ export default {
             </button>
           </div>
         </template>
-        <AppMenu :theme="isDark ? 'dark' : 'light'" :menu="menu" v-model:selectedKeys="selectedKeys" v-model:openKeys="openKeys" :collapsed="collapsed"
-          :accordion="accordion" />
+        <AppMenu :theme="isDark ? 'dark' : 'light'" :menu="menu" v-model:selectedKeys="selectedKeys"
+          v-model:openKeys="openKeys" :collapsed="collapsed" :accordion="accordion" />
         <template #footer>
           <div class="text-center font-bold text-purple-700">versi 1.0</div>
         </template>
