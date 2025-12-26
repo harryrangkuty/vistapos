@@ -22,7 +22,7 @@ php artisan view:cache
 echo "----------------------------------------"
 
 echo "[6/6] Syncing public assets to server..."
-rsync -av --delete --exclude='index.php' --exclude='storage' public/ ../public_html/VISTA POS/
+rsync -av --delete --exclude='index.php' --exclude='storage' public/ ../public_html/
 echo "----------------------------------------"
 
 echo "Deployment completed successfully."
